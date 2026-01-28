@@ -1,5 +1,15 @@
+:root {
+  --bg-page: hsl(212, 45%, 89%);
+  --card-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  --container-radius: 1.25rem;
+  --qr-radius: 0.625rem;
+  --color-title: hsl(218, 44%, 22%);
+  --color-instructions: hsl(216, 15%, 48%);
+}
+
+
 body {
-  background-color: hsl(212, 45%, 89%);
+  background-color: var(--bg-page);
   font-family: "Outfit", sans-serif;
   min-height: 100vh;
   display: flex;
@@ -10,41 +20,42 @@ body {
 
 .container {
   background-color: white;
-  border-radius: 20px;
+  border-radius: var(--container-radius);
   width: 100%;
-  max-width: 320px;
-  padding: 16px 16px 40px 16px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  max-width: 20rem;
+  padding: clamp(1rem, 2vw, 2.5rem);
+  box-shadow: var(--card-shadow);
 }
 
 .image-container {
-  margin-bottom: 24px;
+  margin-block-end: 1.5rem;
 }
 
 .qr-code {
   width: 100%;
-  border-radius: 10px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--qr-radius);
   display: block;
 }
 
 .title {
   font-weight: 700;
-  color: #1F314F;
-  margin-bottom: 16px;
-  font-size: 22px;
-  line-height: 120%;
+  color: var(--color-title);
+  margin-block-end: 1rem;
+  font-size: 1.375rem;
+  line-height: 1.2;
 }
 
 .instructions {
   font-weight: 400;
-  color: #68778D;
-  font-size: 15px;
+  color: var(--color-instructions);
+  font-size: 0.9375rem;
   line-height: 140%;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.0125rem;
 }
 
 .text-container {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
   text-align: center;
 }
